@@ -1,0 +1,134 @@
+body ::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./sounds/doodles.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.01;
+  z-index: -1;
+
+}
+body{
+  text-align: center;
+  background-color: bisque;
+}
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: rgb(48, 28, 2);
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.flash{
+  background-color: white;
+  opacity: 0.5;
+  transition: opacity 0.1s;
+}
+
+.flash{
+  animation: flashAnimation 0.2s ease-in-out 2;
+}
+
+@keyframes flashAnimation {
+  0% {opacity: 1;}
+  50% { opacity: 0.5;}
+  100% { opacity: 1;}
+}
+
+#tittle-two {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  
+
+}
+#title-container{
+  text-align: center;
+  font-family: 'tagesschrift', system-ui;
+  color: rgb(48, 28, 2);
+  margin: 10%;
+}
+.button{
+  display: inline-block;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  width: 120px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #575758, 0 0 20px #575758;
+  transition: all 0.3s ease;
+}
+
+.button:hover{
+  box-shadow: 0 0 20px #575758, 0 0 40px #575758;
+  transform: scale(1.05);
+}
+
+@media( min-width: 400px){
+  .btn{
+    height: 150px;
+    width: 150px;
+  }
+  #level-title {
+    font-size: 3rem;
+  }
+}
+@media(max-width: 400px){
+  .btn{
+    height: 50px;
+    width: 50px;
+  }
+  #level-title{
+    font-size: 1.2rem;
+  }
+}
+
